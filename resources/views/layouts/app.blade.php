@@ -5,10 +5,10 @@
     <title>@yield('title', 'Sistema de Alunos')</title>
 </head>
 <body>
+    @include('layouts.menu')
 
     <main>
         @yield('content')
     </main>
-
 </body>
 </html>
