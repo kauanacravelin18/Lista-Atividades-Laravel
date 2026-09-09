@@ -29,7 +29,7 @@ class AlunoPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return $user->role === 'admin';
     }
 
     /**
@@ -37,7 +37,7 @@ class AlunoPolicy
      */
     public function update(User $user, Aluno $aluno): bool
     {
-        return false;
+        return $user->role === 'professor';
     }
 
     /**
@@ -45,7 +45,7 @@ class AlunoPolicy
      */
     public function delete(User $user, Aluno $aluno): bool
     {
-        return false;
+        return $user->role === 'admin';
     }
 
     /**
